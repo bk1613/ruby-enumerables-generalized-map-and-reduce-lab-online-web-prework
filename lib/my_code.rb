@@ -1,6 +1,6 @@
 # Your Code Here
 def map(source_array)
-  c = source_array.length
+  
   new_array = []
   c.times do |i|
     new_array.push(yield(source_array[i])) 
