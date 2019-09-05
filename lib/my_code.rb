@@ -10,17 +10,17 @@ def map(source_array)
 end
 
 def reduce(array, start_point = nil)
-  if start
-    totalv = start
-    counter = 0
+  if start_val
+    total = start_val
+    x = 0
   else
-    totalv = array[0]
-    counter= 1
+    total = source_array[0]
+    x = 1
   end
 
-   while counter < source_array.length
-    totalv = yield(totalv, array[counter])
-    counter += 1
+  while x < source_array.length
+    total = yield(total, source_array[x])
+    x += 1
   end
-  totalv
+  total
 end
