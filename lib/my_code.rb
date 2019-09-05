@@ -11,16 +11,16 @@ end
 
 def reduce(array, start_point = nil)
   if start_point
-    totalv = start_point
+    total = start_point
     counter = 0
   else
-    totalv = array[0]
+    total = array[0]
     counter= 1
   end
 
    while counter < array.length
-    totalv = yield(totalv, array[counter])
+    total = yield(totalv, array[counter])
     counter += 1
   end
-  totalv
+  total
 end
